@@ -4,6 +4,7 @@
 /* The list of function used */
 void MyDef(int,char*);
 void RightTriangle(int,char*);
+void LeftTriangle(int,char*);
 
 int main(int argc, char** args)
 {
@@ -15,6 +16,9 @@ int main(int argc, char** args)
 	{
 		case  1 : // this is the |\ thing 
 			PrintPat = RightTriangle ;
+		break ;
+		case 2: // this is the /| thing
+			PrintPat = LeftTriangle ; 
 		break ;
 		default :
 			PrintPat = MyDef ; // this is the default value
@@ -35,6 +39,22 @@ void RightTriangle(int a, char* c)
 		printf("%s",c) ;
 		if(i/a == i%a)
 			puts("") ; 
+	}
+}
+
+/* This prints a right angle tirangle in console */
+void LeftTriangle(int a, char* c)
+{
+	for( int i = 0 ; i < a ; i++)
+	{
+		for( int j = 0 ; j < a ; j++)
+		{
+			if(a-j-1 < i) 
+				printf("%s",c);
+			else
+				printf(" ");
+		}
+		puts("");
 	}
 }
 
