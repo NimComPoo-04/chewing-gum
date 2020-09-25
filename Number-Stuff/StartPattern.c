@@ -5,6 +5,8 @@
 void MyDef(int,char*);
 void RightTriangle(int,char*);
 void LeftTriangle(int,char*);
+void IRightTriangle(int a, char* c) ; 
+void ILeftTriangle(int a, char* c) ; 
 
 int main(int argc, char** args)
 {
@@ -14,11 +16,17 @@ int main(int argc, char** args)
 	
 	switch(atoi(args[1])) // this switch statement assigns the value of PrintPat
 	{
-		case  1 : // this is the |\ thing 
+		case 1: // this is the |\ thing 
 			PrintPat = RightTriangle ;
 		break ;
 		case 2: // this is the /| thing
 			PrintPat = LeftTriangle ; 
+		break ;
+		case 3: // this is the \| thing
+			PrintPat = IRightTriangle ; 
+		break ;
+		case 4: // this is the |/ thing 
+			PrintPat = ILeftTriangle ;
 		break ;
 		default :
 			PrintPat = MyDef ; // this is the default value
@@ -58,6 +66,37 @@ void LeftTriangle(int a, char* c)
 	}
 }
 
+/* This Prints a inverted right angle triangle in console */
+void ILeftTriangle(int a, char* c)
+{
+	for( int i = 0 ; i < a ; i++)
+	{
+		for( int j = 0 ; j < a ; j++)
+		{
+			if(a-j-1 >= i) 
+				printf("%s",c);
+			else
+				printf(" ");
+		}
+		puts("");
+	}
+}
+
+/* This Prints a iveted right angle triangle in console */
+void IRightTriangle(int a, char* c)
+{
+	for( int i = 0 ; i < a ; i++)
+	{
+		for( int j = 0 ; j < a ; j++)
+		{
+			if(j > i) 
+				printf("%s",c);
+			else
+				printf(" ");
+		}
+		puts("");
+	}
+}
 void MyDef(int len, char* c) // this function will print an error message
 {
 	puts("We dont have that with us!!");
