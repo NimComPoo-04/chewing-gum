@@ -25,5 +25,10 @@ struct Pixel
 int Draw_PutChar(struct Pixel* pix) ;
 /* this method uses the pixel struct's posx and posy as width and height */
 int Draw_InitF(struct Pixel* pix) ;
+
+int Draw_Line( struct Pixel pix[2]) ; 
+int Draw_Square( struct Pixel pix[4]) ;
+int Draw_Circle( struct Pixel* pix, int rad) ; 
+
 int Draw_DeinitF() ;
 int Draw_Clear() ; 

@@ -20,7 +20,7 @@ hi Normal ctermfg=LightGray ctermbg=Black
 " Syntax highlighting (other color-groups using default, see :help group-name):
 
 hi Comment	cterm=NONE ctermfg=DarkRed
-hi String	cterm=NONE ctermfg=darkgreen
+hi String	cterm=NONE ctermfg=Cyan
 hi Number	cterm=NONE ctermfg=blue
 hi Float	cterm=NONE ctermfg=darkmagenta
 hi Character	cterm=NONE ctermfg=lightgreen
