@@ -35,7 +35,10 @@ int main(int a, char** c)
 	if(a == 1)
 		PrintDir(".", 2);
 	else
-		PrintDir(c[1], 2);
+	{
+		chdir(c[1]);
+		PrintDir('.', 2);
+	}
 	puts("") ;
 }
 
@@ -51,7 +54,6 @@ void EmptySpace(char* c, int len)
 void PrintDir(char* c, int len)
 {
 	DIR *d = opendir(c) ;
-	chdir(c);
 	if( d == NULL)
 	{
 		puts("\033[31m<DIR ! EXISTS>\033[0m") ;
