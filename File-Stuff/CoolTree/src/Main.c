@@ -37,7 +37,7 @@ int main(int a, char** c)
 	else
 	{
 		chdir(c[1]);
-		PrintDir('.', 2);
+		PrintDir(".", 2);
 	}
 	puts("") ;
 }
